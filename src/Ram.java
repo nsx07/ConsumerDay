@@ -16,19 +16,18 @@ public class Ram extends Product {
         System.out.println("Ram working.");
         int countData = randomizeData();
         System.out.println("Processing data...");
-        for (int i = 0; i < countData; i++) {
-            this.frequency = randomizeFrequency(this.frequency);
-            System.out.println("Processing data... with frequency: " + this.frequency + " MHz");
+        for (int i = 0; i <= countData; i++) {
+            System.out.println("Processing data... with frequency: " + randomizeFrequency(this.frequency) + " MHz");
         }
     }
 
     private int randomizeData() {
         Random r = new Random();
-        return r.nextInt(50);
+        return r.nextInt(10) + 1;
     }
 
     private int randomizeFrequency(int maxFrequency) {
         Random r = new Random();
-        return r.nextInt(maxFrequency);
+        return r.nextInt(maxFrequency) + 1;
     }
 }
