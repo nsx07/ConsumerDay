@@ -23,12 +23,14 @@ public class Main {
         cpu.Functionality();
 
         Ssd ssd = new Ssd("SSD ADATA 5TB 2,5 SATA 3 ASU650SS120GTR", 5000, 200, 520, 320, 200, 1, "Black", true);
+        ssd.Functionality();
         ssd.storageData(2, "TB");
         ssd.checkLifespan();
         System.out.println("Write speed: " + ssd.getWriteSpeed() + " MB/s");
         System.out.println("Read speed: " + ssd.getReadSpeed() + " MB/s");
 
         Ram ram = new Ram("RAM ADATA 8GB 2400MHz DDR4 AD4U2400W8G11", 2400, 100, 1, "Black", true);
+        ram.Functionality();
 
     }
 }
