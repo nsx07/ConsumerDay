@@ -1,8 +1,8 @@
-
-
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
+
+import enums.DataUnit;
 
 public class Ssd extends Product {
     private float freeSpace;
@@ -25,21 +25,19 @@ public class Ssd extends Product {
         System.out.println("Free space: " + this.freeSpace + " GB");
     }
 
-    public void storageData(float fileSize, String unit) {
-        if (unit == "MB") {
+    public void storageData(float fileSize, DataUnit unit) {
+        if (unit == DataUnit.mb) {
             if (canStore(fileSize / 1024))
                 this.freeSpace -= fileSize / 1000;
-        } else if (unit == "GB") {
+        } else if (unit == DataUnit.gb) {
             if (canStore(fileSize))
                 this.freeSpace -= fileSize;
-        } else if (unit == "TB") {
+        } else {
             if (canStore(fileSize * 1024))
                 this.freeSpace -= fileSize * 1000;
-        } else {
-            System.out.println("Invalid unit.");
         }
 
-        System.out.println("Free space: " + this.freeSpace + " GB");
+        System.out.println("Remain space: " + this.freeSpace + " GB");
     }
 
     private boolean canStore(float fileSizeConverted) {

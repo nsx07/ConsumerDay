@@ -1,5 +1,7 @@
 import static java.lang.Thread.sleep;
 
+import enums.DataUnit;
+
 public class Main {
 
     public static void Logger(int miliSeconds) {
@@ -24,7 +26,7 @@ public class Main {
 
         Ssd ssd = new Ssd("SSD ADATA 5TB 2,5 SATA 3 ASU650SS120GTR", 5000, 200, 520, 320, 200, 1, "Black", true);
         ssd.Functionality();
-        ssd.storageData(2, "TB");
+        ssd.storageData(2, DataUnit.tb);
         ssd.checkLifespan();
         System.out.println("Write speed: " + ssd.getWriteSpeed() + " MB/s");
         System.out.println("Read speed: " + ssd.getReadSpeed() + " MB/s");
