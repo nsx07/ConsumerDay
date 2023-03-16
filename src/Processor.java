@@ -31,4 +31,18 @@ public class Processor extends Product {
         }
 
     }
+
+
+    void Show() {
+        super.Show();
+
+        System.out.println("clock: " + this.clock);
+        System.out.println("cacheL1: " + this.cacheL1);
+        System.out.println("cacheL2: " + this.cacheL2);
+        System.out.println("cacheL3: " + this.cacheL3);
+        System.out.println("tdp: " + this.tdp);
+
+    }
+
+
 }

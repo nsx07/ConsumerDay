@@ -14,5 +14,12 @@ public abstract class Product {
     }
 
     abstract void Functionality();
+    void Show() {
+        System.out.println("name: " + this.name.toUpperCase());
+        System.out.println("price: " + this.price);
+        System.out.println("quantity: " + this.quantity);
+        System.out.println("color: " + this.color);
+        System.out.println("isNew: " + this.isNew);
+    };
 
 }
