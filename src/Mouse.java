@@ -7,7 +7,7 @@ public  class Mouse extends Product{
 
     public Mouse(float price, int quantity, String color, boolean isNew, String brand, String model, MouseType mouseType) {
         super(price, quantity, color, isNew);
-        this.name = "Headset";
+        this.name = "Mouse";
         this.brand = brand;
         this.model = model;
         this.mouseType = mouseType;
@@ -26,7 +26,6 @@ public  class Mouse extends Product{
     
     @Override
     void Functionality() {
-        // TODO Auto-generated method stub
-        
+        super.Functionality();
     }
 } 

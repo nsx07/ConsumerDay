@@ -20,22 +20,12 @@ public class Processor extends Product {
 
     @Override
     void Functionality()  {
-        try {
-            System.out.println("Processor is on");
-            sleep(333);
-            System.out.println("Warning up the engine.");
-            sleep(333);
-            System.out.println("Lets count!");
-        } catch (Exception exception){
-            System.out.println(exception.getMessage());
-        }
-
+        super.Functionality();
+        System.out.println("Lets count bits!!!");
     }
-
 
     void Show() {
         super.Show();
-
         System.out.println("clock: " + this.clock);
         System.out.println("cacheL1: " + this.cacheL1);
         System.out.println("cacheL2: " + this.cacheL2);
@@ -43,6 +33,5 @@ public class Processor extends Product {
         System.out.println("tdp: " + this.tdp);
 
     }
-
 
 }

@@ -31,7 +31,7 @@ public class Headset extends Product {
             System.out.println("The min volume is 0!");
     }
 
-    public void volumeAlert(){
+    private void volumeAlert(){
         System.out.println("Careful! Volume above recommended");
 
     }
@@ -45,7 +45,6 @@ public class Headset extends Product {
 
     @Override
     void Functionality() {
-        // TODO Auto-generated method stub
-        
+        super.Functionality();
     }
 }
